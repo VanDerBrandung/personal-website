@@ -6,52 +6,71 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 import { SocialLink } from '@/components/Icons'
-import { GridPattern } from '../components/GridPattern'
-// [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]
+import { GridPattern } from '@/components/GridPattern'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { Photos } from '@/components/Photos'
+
+const socials = [
+  {
+    link: 'https://www.instagram.com/vanderbrandung/',
+    ariaLabel: 'Follow on Instagram',
+    icon: InstagramIcon,
+  },
+  {
+    link: 'https://www.linkedin.com/in/luis-schmitt-465a7116b/',
+    ariaLabel: 'Follow on LinkedIn',
+    icon: LinkedInIcon,
+  },
+  {
+    link: 'https://github.com/VanDerBrandung',
+    ariaLabel: 'Follow on GitHub',
+    icon: GitHubIcon,
+  },
+  {
+    link: 'https://gitlab.com/luisschmitt01',
+    ariaLabel: 'Follow on Gitlab',
+    icon: GitlabIcon,
+  },
+]
+
 export default function Home() {
   return (
     <>
       <Container className='overflow-b-hidden py-9'>
         <GridPattern
-          className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5'
+          className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]'
           interactive
         />
         <div className='z-10 max-w-2xl'>
-          <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
-            Software developer, founder, and tech enthusiast.
-          </h1>
-          <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
-            I’m Luis, a software developer and tech enthusiast based in Germany
-            - Karlsruhe. I’m one of the lead developers at OneCalendar, where we
-            strive to build software that empowers the digitalisation of
-            businesses.
-          </p>
-          <div className='mt-6 flex gap-6'>
-            <SocialLink
-              href='https://www.instagram.com/vanderbrandung/'
-              aria-label='Follow on Instagram'
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href='https://www.linkedin.com/in/luis-schmitt-465a7116b/'
-              aria-label='Follow on LinkedIn'
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href='https://github.com/VanDerBrandung'
-              aria-label='Follow on GitHub'
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href='https://gitlab.com/luisschmitt01'
-              aria-label='Follow on Gitlab'
-              icon={GitlabIcon}
-            />
-          </div>
+          <FadeIn>
+            <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
+              Software developer, founder, and tech enthusiast.
+            </h1>
+            <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
+              I’m Luis, a software developer and tech enthusiast based in
+              Germany - Karlsruhe. I’m one of the lead developers at
+              OneCalendar, where we strive to build software that empowers the
+              digitalisation of businesses.
+            </p>
+          </FadeIn>
+          <FadeInStagger>
+            <div className='mt-6 flex gap-6'>
+              {socials.map(({ link, ariaLabel, icon: Icon }) => (
+                <FadeIn key={link}>
+                  <SocialLink
+                    key={link}
+                    href={link}
+                    aria-label={ariaLabel}
+                    icon={Icon}
+                  />
+                </FadeIn>
+              ))}
+            </div>
+          </FadeInStagger>
         </div>
       </Container>
 
-      {/* <Photos /> */}
+      <Photos />
       {/* <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">

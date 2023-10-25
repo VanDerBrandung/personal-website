@@ -1,6 +1,5 @@
 import { Footer } from '@/components/Footer'
-import { GridPattern } from './GridPattern'
-// import { Header } from '@/components/Header'
+import { Header } from '@/components/Header'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +10,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className='relative flex w-full flex-col'>
-        {/* <Header /> */}
+        <Header />
         <main className='flex-auto'>{children}</main>
         <Footer />
       </div>

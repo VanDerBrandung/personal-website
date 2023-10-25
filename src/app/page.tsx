@@ -11,9 +11,9 @@ import { GridPattern } from '../components/GridPattern'
 export default function Home() {
   return (
     <>
-      <Container className='mt-9 h-full overflow-hidden'>
+      <Container className='overflow-b-hidden py-9'>
         <GridPattern
-          className='absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5'
+          className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5'
           interactive
         />
         <div className='z-10 max-w-2xl'>
@@ -50,6 +50,7 @@ export default function Home() {
           </div>
         </div>
       </Container>
+
       {/* <Photos /> */}
       {/* <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">

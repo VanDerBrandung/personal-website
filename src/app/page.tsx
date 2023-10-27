@@ -9,6 +9,9 @@ import { SocialLink } from '@/components/Icons'
 import { GridPattern } from '@/components/GridPattern'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Photos } from '@/components/Photos'
+import { Resume } from '../components/Resume'
+import Skillset from '../components/Skillset'
+import TechStack from '../components/TechStack'
 
 const socials = [
   {
@@ -37,10 +40,12 @@ export default function Home() {
   return (
     <>
       <Container className='overflow-b-hidden py-9'>
-        <GridPattern
-          className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]'
-          interactive
-        />
+        <FadeIn>
+          <GridPattern
+            className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]'
+            interactive
+          />
+        </FadeIn>
         <div className='z-10 max-w-2xl'>
           <FadeIn>
             <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
@@ -69,21 +74,26 @@ export default function Home() {
           </FadeInStagger>
         </div>
       </Container>
+      <Container>
+        <TechStack />
+        <Skillset />
+      </Container>
 
       <Photos />
-      {/* <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+      <Container className='mt-24 md:mt-28'>
+        <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
+          <div className='flex flex-col gap-16'>
+            {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
-            ))}
+            ))} */}
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-            <Resume />
+          <div className='space-y-10 lg:pl-16 xl:pl-24'>
+            <FadeIn>
+              <Resume />
+            </FadeIn>
           </div>
         </div>
-      </Container> */}
+      </Container>
     </>
   )
 }

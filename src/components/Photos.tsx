@@ -1,5 +1,5 @@
 import image1 from '@/images/photos/picture-1.jpg'
-import image2 from '@/images/photos/picture-2.jpg'
+// import image2 from '@/images/photos/picture-2.jpg'
 import image3 from '@/images/photos/picture-3.jpg'
 import image4 from '@/images/photos/picture-4.jpg'
 import image5 from '@/images/photos/picture-5.jpg'
@@ -12,7 +12,7 @@ export function Photos() {
   return (
     <div className='mt-16 sm:mt-20'>
       <div className='-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'>
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(

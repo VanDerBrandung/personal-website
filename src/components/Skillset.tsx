@@ -27,7 +27,7 @@ const cards = [
 
 export default function Skillset() {
   return (
-    <div className='relative isolate overflow-hidden py-12 sm:py-24'>
+    <div className='relative isolate overflow-hidden py-12'>
       <div className='mx-auto max-w-7xl'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>

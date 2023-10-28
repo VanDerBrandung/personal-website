@@ -49,10 +49,10 @@ export default function Home() {
         <div className='z-10 max-w-2xl'>
           <FadeIn>
             <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
-              Software developer, founder, and tech enthusiast.
+              Software developer, and tech enthusiast.
             </h1>
             <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
-              I’m Luis, a software developer and tech enthusiast based in
+              Hey, I’m Luis, a software developer and tech enthusiast based in
               Germany - Karlsruhe. I’m one of the lead developers at
               OneCalendar, where we strive to build software that empowers the
               digitalisation of businesses.

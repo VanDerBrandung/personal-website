@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: {
     template: '%s - Luis Schmitt',
-    default: 'Software developer, founder, and tech enthusiast',
+    default: 'Software developer, and tech enthusiast',
   },
   description:
     'I’m Luis, a software developer and tech enthusiast based in Germany - Karlsruhe. I’m one of the lead developers at OneCalendar, where we strive to build software that empowers the digitalisation of businesses.',

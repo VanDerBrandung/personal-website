@@ -9,10 +9,11 @@ import { SocialLink } from '@/components/Icons'
 import { GridPattern } from '@/components/GridPattern'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Photos } from '@/components/Photos'
-import { Resume } from '../components/Resume'
-import Skillset from '../components/Skillset'
-import TechStack from '../components/TechStack'
+import { Resume } from '@/components/Resume'
+import Skillset from '@/components/Skillset'
+import TechStack from '@/components/TechStack'
 import AnimatedText from '@/components/AnimatedText'
+import { useTranslation } from '../i18n'
 
 const socials = [
   {
@@ -37,7 +38,13 @@ const socials = [
   },
 ]
 
-export default function Home() {
+export default async function Home({
+  params: { lng },
+}: {
+  params: { lng: string }
+}) {
+  const { t } = await useTranslation(lng)
+
   return (
     <>
       <Container className='overflow-b-hidden py-9'>
@@ -50,9 +57,7 @@ export default function Home() {
         <div className='z-10 max-w-2xl'>
           <FadeIn>
             <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
-              <AnimatedText
-              text='Software developer, and tech enthusiast.'
-            />
+              <AnimatedText text={t('home.title')} />
             </h1>
             <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
               Hey, I’m Luis, a software developer and tech enthusiast based in

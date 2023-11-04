@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import '../styles/globals.css'
+import '../../styles/globals.css'
 import { Layout } from '@/components/Layout'
-import { Providers } from '@/app/providers'
+import { Providers } from '@/app/[lng]/providers'
+import { languages } from '../i18n/settings'
+import { dir } from 'i18next'
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }))
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,11 +28,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { lng },
 }: {
   children: React.ReactNode
+  params: {
+    lng: string
+  }
 }) {
   return (
-    <html lang='en' className='h-full antialiased' suppressHydrationWarning>
+    <html
+      lang={lng}
+      dir={dir(lng)}
+      className='h-full antialiased'
+      suppressHydrationWarning
+    >
       <body className='flex h-full bg-zinc-50 dark:bg-black'>
         <Providers>
           <div className='flex w-full'>

@@ -1,40 +1,40 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import onecalendar from '@/images/logos/onecalendar.png'
 import osmvalidation from '@/images/logos/osmvalidation.png'
 import { HiLink } from 'react-icons/hi2'
-
-const projects = [
-  {
-    name: 'OneCalendar',
-    description:
-      'Cloud based tool for managing appointments of small to mid sized businesses.',
-    link: { href: 'http://one-calendar.de', label: 'one-calendar' },
-    logo: onecalendar,
-  },
-  {
-    name: 'OSM Validation',
-    description:
-      'Service for validating address data with OpenStreetMaps and providing a REST API for the results.',
-    // link: { href: 'http://one-calendar.de', label: 'osm-validation' },
-    logo: osmvalidation,
-  },
-]
+import { useTranslation } from '@/app/i18n'
 
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'All the things I have worked on over the last couple years.',
 }
 
-export default function Projects() {
+export default async function Projects({
+  params: { lng },
+}: {
+  params: { lng: string }
+}) {
+  const { t } = await useTranslation(lng)
+
+  const projects = [
+    {
+      name: 'OneCalendar',
+      description: t('projects.onecalendar.description'),
+      link: { href: 'http://one-calendar.de', label: 'one-calendar' },
+      logo: onecalendar,
+    },
+    {
+      name: 'OSM Validation',
+      description: t('projects.osmvalidation.description'),
+      // link: { href: 'http://one-calendar.de', label: 'osm-validation' },
+      logo: osmvalidation,
+    },
+  ]
   return (
-    <SimpleLayout
-      title='All the things I have worked on over the last couple years.'
-      intro='In the last years I worked on quite a few projects with different programming languages and technologies. Some of them may not even be only technology related. But here I want to showcase all of my work, so you can get a glimpse of what I have done together with some amazing people.'
-    >
+    <SimpleLayout title={t('projects.title')} intro={t('projects.intro')}>
       <ul
         role='list'
         className='grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3'

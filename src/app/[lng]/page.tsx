@@ -38,6 +38,7 @@ const socials = [
   },
 ]
 
+
 export default async function Home({
   params: { lng },
 }: {
@@ -60,11 +61,7 @@ export default async function Home({
               <AnimatedText text={t('home.title')} />
             </h1>
             <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
-              Hey, I’m Luis, a software developer and tech enthusiast based in
-              Germany - Karlsruhe. I’m one of the lead developers at
-              OneCalendar, where we strive to build software that empowers the
-              digitalisation of businesses.
-            </p>
+              {t('home.text')} </p>
           </FadeIn>
           <FadeInStagger>
             <div className='mt-6 flex gap-6'>

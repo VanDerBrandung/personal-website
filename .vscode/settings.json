@@ -2,11 +2,15 @@
   "i18n-ally.localesPaths": [
     "src/app/i18n/locales",
   ],
-  "i18n-ally.displayLanguage": "de",
+  "i18n-ally.displayLanguage": "en",
   "i18n-ally.extract.ignored": [
+    "Follow on Instagram",
+    "Follow on LinkedIn",
+    "Follow on GitHub",
+    "Follow on Gitlab"
   ],
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.sourceLanguage": "de",
+  "i18n-ally.sourceLanguage": "en",
   "i18n-ally.extract.ignoredByFiles": {
   }
 }

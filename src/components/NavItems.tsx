@@ -6,7 +6,7 @@ export async function NavItems({ lng }: { lng: string }) {
     { href: `/${lng}`, text: t('NavItems.homeLabel') },
     { href: `/${lng}/about`, text: t('NavItems.aboutLabel') },
     { href: `/${lng}/projects`, text: t('NavItems.projectsLabel') },
-    { href: `/${lng}/cv`, text: t('NavItems.cvLabel') },
+    // { href: `/${lng}/cv`, text: t('NavItems.cvLabel') },
   ]
 
   return navItems

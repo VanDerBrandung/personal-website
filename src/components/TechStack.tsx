@@ -73,7 +73,7 @@ export default async function TechStack({ lng }: { lng: string }) {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <FadeIn>
           <h2 className='text-center text-lg font-semibold leading-8 text-zinc-800 dark:text-zinc-100'>
-            {t('techStack.header')}{' '}
+            {t('techStack.header')}
           </h2>
         </FadeIn>
         <FadeInStagger>

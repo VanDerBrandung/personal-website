@@ -49,7 +49,7 @@ export default async function About({
 }: {
   params: { lng: string }
 }) {
-  const { t } = await useTranslation(lng);
+  const { t } = await useTranslation(lng)
 
   return (
     <Container className='mt-16 sm:mt-32'>
@@ -68,33 +68,21 @@ export default async function About({
         </div>
         <div className='lg:order-first lg:row-span-2'>
           <h1 className='text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
-            <AnimatedText
-              letterDelay={0.025}
-              text='Hey I’m Luis. I live in Karlsruhe, I love to code and work with
-            all different kinds of tech.'
-            />
+            <AnimatedText letterDelay={0.025} text={t('about.header')} />
           </h1>
           <FadeInStagger>
             <div className='mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400'>
               <FadeIn>
-                <p>
-                  {t('about.text1')}
-                </p>
+                <p>{t('about.text1')}</p>
               </FadeIn>
               <FadeIn>
-                <p>
-                {t('about.text2')}
-                </p>
+                <p>{t('about.text2')}</p>
               </FadeIn>
               <FadeIn>
-                <p>
-                {t('about.text3')}
-                </p>
+                <p>{t('about.text3')}</p>
               </FadeIn>
               <FadeIn>
-                <p>
-              {t('about.text4')}
-                </p>
+                <p>{t('about.text4')}</p>
               </FadeIn>
             </div>
           </FadeInStagger>

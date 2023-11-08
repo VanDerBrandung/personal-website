@@ -10,7 +10,6 @@ export const config = {
 }
 
 export function middleware(req: any) {
-  console.log(req.cookies)
   let lng
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName).value)

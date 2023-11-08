@@ -1,8 +1,9 @@
 import Link from 'next/link'
-
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 import { NavItems } from './NavItems'
 import { useTranslation } from '../app/i18n'
+import { Trans } from 'react-i18next/TransWithoutContext'
+import clsx from 'clsx'
 
 function NavLink({
   href,
@@ -37,6 +38,30 @@ export async function Footer({ lng }: { lng: string }) {
                     {text}
                   </NavLink>
                 ))}
+              </div>
+              <div className='flex gap-2'>
+                <Trans t={t}></Trans>
+
+                <p
+                  className={clsx(
+                    lng === 'de'
+                      ? 'font-bold text-indigo-500 dark:text-indigo-400'
+                      : 'text-zinc-800 dark:text-zinc-200',
+                    'text-sm font-medium '
+                  )}
+                >
+                  <Link href={`/de`}>Deutsch</Link>
+                </p>
+                <p
+                  className={clsx(
+                    lng === 'en'
+                      ? 'dark:text--indigo-400 font-bold text-indigo-500'
+                      : 'text-zinc-800 dark:text-zinc-200',
+                    'text-sm font-medium '
+                  )}
+                >
+                  <Link href={`/en`}>English</Link>
+                </p>
               </div>
               <p className='text-sm text-zinc-400 dark:text-zinc-500'>
                 &copy; {new Date().getFullYear()} Luis Schmitt. All rights

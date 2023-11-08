@@ -1,6 +1,8 @@
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
+import { NavItems } from './NavItems'
+import { useTranslation } from '../app/i18n'
 
 function NavLink({
   href,
@@ -19,7 +21,10 @@ function NavLink({
   )
 }
 
-export function Footer() {
+export async function Footer({ lng }: { lng: string }) {
+  const { t } = await useTranslation(lng)
+  const navItems = await NavItems({ lng: lng })
+
   return (
     <footer className='mt-32 flex-none'>
       <ContainerOuter>
@@ -27,10 +32,11 @@ export function Footer() {
           <ContainerInner>
             <div className='flex flex-col items-center justify-between gap-6 sm:flex-row'>
               <div className='flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200'>
-                <NavLink href='/home'>Home</NavLink>
-                <NavLink href='/about'>About</NavLink>
-                <NavLink href='/projects'>Projects</NavLink>
-                <NavLink href='/cv'>CV</NavLink>
+                {navItems.map(({ href, text }) => (
+                  <NavLink key={href} href={href}>
+                    {text}
+                  </NavLink>
+                ))}
               </div>
               <p className='text-sm text-zinc-400 dark:text-zinc-500'>
                 &copy; {new Date().getFullYear()} Luis Schmitt. All rights

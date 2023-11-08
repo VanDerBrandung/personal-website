@@ -3,42 +3,38 @@ import {
   HiOutlineCpuChip,
   HiOutlineServerStack,
 } from 'react-icons/hi2'
+import { useTranslation } from '../app/i18n'
 
-const cards = [
-  {
-    name: 'Software Development',
-    description:
-      'During my time at OneCalendar I was able to solidify my knowlege as a software developer. This continuous commitment allowed me to deepen my expertise with Node.js, Typescript, React and a lot of other frameworks, languages and tools.',
-    icon: HiOutlineComputerDesktop,
-  },
-  {
-    name: 'Software Architecture',
-    description:
-      'I dedicated my efforts to building expertise in software architecture. This concentrated focus enabled me to develop a deep understanding of architectural principles and best practices in software design.',
-    icon: HiOutlineCpuChip,
-  },
-  {
-    name: 'Integration & Migration',
-    description:
-      'My time at DIGITALL allowed me to gain experience in the field of integration and migration projects. I was able to work with a variety of tools and technologies, such as MuleSoft, Talend, Salesforce and many more.',
-    icon: HiOutlineServerStack,
-  },
-]
+export default async function Skillset({ lng }: { lng: string }) {
+  const { t } = await useTranslation(lng)
 
-export default function Skillset() {
+  const cards = [
+    {
+      name: t('skillset.card1.name'),
+      description: t('skillset.card1.description'),
+      icon: HiOutlineComputerDesktop,
+    },
+    {
+      name: t('skillset.card2.name'),
+      description: t('skillset.card2.description'),
+      icon: HiOutlineCpuChip,
+    },
+    {
+      name: t('skillset.card3.name'),
+      description: t('skillset.card3.description'),
+      icon: HiOutlineServerStack,
+    },
+  ]
+
   return (
     <div className='relative isolate overflow-hidden py-12'>
       <div className='mx-auto max-w-7xl'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
-            Skills
+            {t('skillset.header')}{' '}
           </h2>
           <p className='text-md mt-6 leading-8 text-zinc-600 dark:text-zinc-400'>
-            My skillset is quite extensive, encompassing Fullstack Web
-            Development, Software Architecture, as well as Data Integration &
-            Migration Projects. With this broad range of expertise, I’m
-            well-prepared to handle a variety of projects and provide holistic
-            solutions.
+            {t('skillset.mainText')}{' '}
           </p>
         </div>
         <div className='mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-6 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8'>

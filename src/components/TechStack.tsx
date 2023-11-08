@@ -1,4 +1,3 @@
-'use client'
 import java from '@/images/logos/java.svg'
 import typescript from '@/images/logos/typescript.svg'
 import nodejs from '@/images/logos/nodejs.svg'
@@ -11,10 +10,9 @@ import postgresql from '@/images/logos/postgresql.svg'
 import redis from '@/images/logos/redis.svg'
 import talend from '@/images/logos/talend.svg'
 import mulesoft from '@/images/logos/mulesoft.svg'
-
-import Image, { type ImageProps } from 'next/image'
+import Image from 'next/image'
 import { FadeIn, FadeInStagger } from './FadeIn'
-import { useEffect, useState } from 'react'
+import { useTranslation } from '../app/i18n'
 
 const images = [
   {
@@ -67,22 +65,22 @@ const images = [
   },
 ]
 
-export default function TechStack() {
-  const [photos, setPhotos] = useState(images)
+export default async function TechStack({ lng }: { lng: string }) {
+  const { t } = await useTranslation(lng)
 
   return (
     <div className='py-12'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <FadeIn>
           <h2 className='text-center text-lg font-semibold leading-8 text-zinc-800 dark:text-zinc-100'>
-            Working with beloved technologies and tools
+            {t('techStack.header')}{' '}
           </h2>
         </FadeIn>
         <FadeInStagger>
           <div className='py-12'>
             <div className='mx-auto max-w-7xl px-6 lg:px-8'>
               <div className='-mx-6 grid grid-cols-2 gap-1 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-5'>
-                {photos.map((image) => (
+                {images.map((image) => (
                   <FadeIn
                     key={image.alt}
                     className='border-1 flex items-center justify-center rounded-xl border border-zinc-100 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-200'

@@ -4,6 +4,7 @@ import digitall from '@/images/logos/digitall.jpg'
 import ec4u from '@/images/logos/ec4u.jpg'
 import { ArrowDownIcon, BriefcaseIcon } from './Icons'
 import { Button } from './Button'
+import { useTranslation } from '../app/i18n'
 
 interface Role {
   company: string
@@ -50,38 +51,40 @@ function Role({ role }: { role: Role }) {
   )
 }
 
-export function Resume() {
+export async function Resume({ lng }: { lng: string }) {
+  const { t } = await useTranslation(lng)
+
   let resume: Array<Role> = [
     {
       company: 'OneCalendar',
-      title: 'Lead developer',
+      title: t('resume.oneCalendarJob.title'),
       logo: onecalendar,
       start: '2021',
       end: {
-        label: 'Present',
+        label: t('resume.presentLabel'),
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
       company: 'DIGITALL',
-      title: 'Consultant',
+      title: t('resume.DIGITALL.title1'),
       logo: digitall,
       start: '2022',
       end: {
-        label: 'Present',
+        label: t('resume.presentLabel'),
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
       company: 'DIGITALL',
-      title: 'Dual student',
+      title: t('resume.DIGITALL.title2'),
       logo: digitall,
       start: '2021',
       end: '2022',
     },
     {
       company: 'ec4u',
-      title: 'Dual student',
+      title: t('resume.ec4u.title'),
       logo: ec4u,
       start: '2019',
       end: '2021',
@@ -99,10 +102,10 @@ export function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href='#' variant='secondary' className='group mt-6 w-full'>
-        Download CV
+      {/* <Button href='#' variant='secondary' className='group mt-6 w-full'>
+       { t('resume.downloadCVLabel')}
         <ArrowDownIcon className='h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50' />
-      </Button>
+      </Button> */}
     </div>
   )
 }

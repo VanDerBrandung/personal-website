@@ -38,7 +38,6 @@ const socials = [
   },
 ]
 
-
 export default async function Home({
   params: { lng },
 }: {
@@ -61,7 +60,8 @@ export default async function Home({
               <AnimatedText text={t('home.title')} />
             </h1>
             <p className='mt-6 text-base text-zinc-600 dark:text-zinc-400'>
-              {t('home.text')} </p>
+              {t('home.text')}{' '}
+            </p>
           </FadeIn>
           <FadeInStagger>
             <div className='mt-6 flex gap-6'>
@@ -80,8 +80,8 @@ export default async function Home({
         </div>
       </Container>
       <Container>
-        <TechStack />
-        <Skillset />
+        <TechStack lng={lng} />
+        <Skillset lng={lng} />
       </Container>
 
       <Photos />
@@ -94,7 +94,7 @@ export default async function Home({
           </div>
           <div className='space-y-10 lg:pl-16 xl:pl-24'>
             <FadeIn>
-              <Resume />
+              <Resume lng={lng} />
             </FadeIn>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default async function Home({
       <Container className='overflow-b-hidden py-9'>
         <FadeIn>
           <GridPattern
-            className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]'
+            className='absolute inset-x-0 -top-56 -z-10 h-[1100px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]'
             interactive
           />
         </FadeIn>

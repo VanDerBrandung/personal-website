@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useTranslation } from '../../app/i18n'
 import { NavItems } from '../NavItems'
 
 export function NavItem({
@@ -38,7 +37,6 @@ type ExtendedNavProps = React.ComponentPropsWithoutRef<'nav'> & {
 }
 
 export async function DesktopNavigation(props: ExtendedNavProps) {
-  const { t } = await useTranslation(props.lng)
   const navItems = await NavItems({ lng: props.lng })
 
   return (

@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  website:
+  personal-website:
     restart: unless-stopped
    ## environment:
     ##  - Test
@@ -8,7 +8,7 @@ services:
       context: ./
       dockerfile: ./Dockerfile
       target: production
-    ##image: registry.gitlab.com/onecalendar/onecalendar/app_pre_prod_frontend
+    image: vanderbrandung/apps/personal-website:latest
     ports:
       - '7000:3000'
     networks:

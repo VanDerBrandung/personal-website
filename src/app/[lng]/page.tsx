@@ -50,7 +50,7 @@ export default async function Home({
       <Container className='overflow-b-hidden py-9'>
         <FadeIn>
           <GridPattern
-            className='absolute inset-x-0 -top-56 -z-10 h-[900px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_top_left,white_40%,transparent_70%)]'
+            className='absolute inset-x-0 -top-56 -z-10 h-[1100px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]'
             interactive
           />
         </FadeIn>
@@ -86,13 +86,14 @@ export default async function Home({
 
       <Photos />
       <Container className='mt-24 md:mt-28'>
-        <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
+        {/* <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'> */}
+        <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20'>
           <div className='flex flex-col gap-16'>
             {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))} */}
           </div>
-          <div className='space-y-10 lg:pl-16 xl:pl-24'>
+          <div className='space-y-10'>
             <FadeIn>
               <Resume lng={lng} />
             </FadeIn>

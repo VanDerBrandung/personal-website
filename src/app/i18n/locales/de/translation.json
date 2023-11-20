@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Software Entwickler und Tech Enthusiast",
-    "text": "Hey, ich bin Luis, ein technikbegeisterter Softwareentwickler und Berater aus Deutschland – Karlsruhe. \nIch bin einer der leitenden Entwickler bei OneCalendar, wo wir alles daran setzen, Software zu entwickeln, die die Digitalisierung von Unternehmen beschleunigt."
+    "text": "Hey, ich bin Luis, ein technikbegeisterter IT-Berater und Softwareentwickler aus Karlsruhe. Eines meiner Herzensprojekte ist OneCalendar, wo ich als einer der führenden Entwicklicker tätig bin. Dort schaffen wir Tools für die Digitalisierung von mittelständischen Unternehmen."
   },
   "NavItems": {
     "aboutLabel": "Über mich",
@@ -14,11 +14,11 @@
     "navigationLabel": "Navigation"
   },
   "about": {
-    "text1": "Da du auf diese Seite gestoßen bist, möchtest du wahrscheinlich etwas mehr über mich erfahren. \nAuf geht's:",
-    "text2": "Wie du wahrscheinlich schon bemerkt hast, bin ich technikverliebt. \nDarüber hinaus gehe ich aber auch verschiedenen Sportarten nachwie Mountainbiken, Klettern und Powerlifting. \nAußerdem verbringe ich gerne Zeit mit meinen Freunden und meiner Familie.",
-    "text3": "Meine Programmierkarriere begann mit 17 Jahren und an einigen kleinen Projekten in Java und C arbeitete. \nDurch mein Wirtschaftsinformatik-Studium konnte ich viel über verschiedene Bereiche der Informatik lernen. \nUngefähr zu dieser Zeit verliebte ich mich wirklich in die Webentwicklung und verbrachte einen großen Teil meiner Freizeit damit, etwas über Typescript, Node.js und React zu lernen. \nDarüber hinaus konnte ich während meiner Praxissemester bei DIGITALL Kenntnisse im Bereich Requirements Engineering, Datenmigrationen und Integrationen sammeln. \nWährend ich noch an einigen mittelgroßen Projekten mit Java arbeitete, hat mir die Arbeit an größeren Webprojekten vor allem mit Typescript Spaß gemacht.",
-    "text4": "Heute arbeite ich primär als Berater für Datenintegration und Migration bei DIGITALL. In meiner restlichen Zeit treibe ich zusammen mit dem Team die Entwicklung von OneCalendar voran. Ich arbeite sehr gerne in den beiden verschiedenen Bereichen, da ich stark von der Cross-Funktionalität profitiere.",
-    "header": "Hey Ich bin Luis, komme aus Karlsruhe. Ich lebe für Code und arbeite mit allen Möglichen Technologien."
+    "header": "Hey Ich bin Luis, IT-Berater und Softwareentwickler aus Karlsruhe.",
+    "text1": "Freut mich, dass du hier bist. Da du es bis hierhin geschafft hast, möchte ich dir ein wenig mehr über mich erzählen, also auf gehts!",
+    "text2": "Neben meiner Affinität für die verschiedensten Programmiersprachen und Tools im IT-Segment haben es mir ein paar Sportarten besonders angetan. Ich halte mich mehrmals die Woche fit mit Powerlifting und wenn ich Zeit finde verschlägt es mich auch mal auf dem Mountainbike in den Wald. Außerdem schätze ich die Zeit mit meinen Freunden und meiner Familie sehr.",
+    "text3": "Mit 17 Jahren habe ich einen Teil der Zeit die ich mit Computerspielen verbracht habe gegen das Programmieren getauscht. Zu Beginn habe ich an ein paar kleinere Projekten mit Java und C gearbeitet. Richtig los ging es allerings erst während meinem Wirtschaftsinformatik-Studium. Hier konnte ich viel über verschiedene Bereiche der Informatik lernen. Ungefähr zu dieser Zeit hat es mir die Webentwicklung besonders angetan und ich verbrachte einen großen Teil meiner Freizeit damit, etwas über Typescript, Node.js und React zu lernen. Darüber hinaus konnte ich während meiner Praxissemester bei DIGITALL Kenntnisse im Bereich Requirements Engineering, Datenmigrationen und Integrationen sammeln. Während ich noch an einigen mittelgroßen Projekten mit Java arbeitete, hat mir allerdings besonders die Arbeit mit Typescript und Node.js gefallen, weil es für mich frischen Wind in die Sache gebracht hat.",
+    "text4": "Heute arbeite ich primär als Berater für Datenintegration und Migration bei DIGITALL wo ich zahlreiche Projekte erfolgreich abgeschlossen habe. In meiner restlichen Zeit treibe ich zusammen mit dem Team die Entwicklung von OneCalendar voran. Ich arbeite sehr gerne in den beiden verschiedenen Bereichen, da ich stark von der Cross-Funktionalität profitiere."
   },
   "notFound": {
     "goBackText": "Zurück zur Hauptseite",
@@ -26,14 +26,14 @@
     "title": "Seite nicht gefunden"
   },
   "projects": {
-    "intro": "In den letzten Jahren habe ich an zahlreichen Projekten mit unterschiedlichen Programmiersprachen und Technologien gearbeitet. \nEinige davon bewegen sich auch abseits meiner eher technischen Projekte. \nAber hier möchte ich meine gesamte Arbeit präsentieren, um einen Eindruck von dem zu vermitteln, was ich zusammen mit einigen fantastischen Menschen gemacht habe.",
+    "title": "Hier findest du ein paar meiner Projekte, die dich vielleicht interessieren könnten.",
+    "intro": "In den letzten Jahren habe ich an zahlreichen Projekten mit unterschiedlichen Programmiersprachen und Technologien gearbeitet. Einige davon möchte ich hier sehr gerne teilen, da sie mir besonders am Herzen liegen. Ich bin immer wieder fasziniert, wie viel man mit dem richtigen Team schaffen kann.",
     "onecalendar": {
       "description": "Cloudbasiertes Tool zur Terminverwaltung kleiner und mittlerer Unternehmen."
     },
     "osmvalidation": {
-      "description": "Dienst zur Validierung von Adressdaten mit OpenStreetMaps und Bereitstellung einer REST-API für die Ergebnisse."
-    },
-    "title": "All die Dinge, an denen ich in den letzten Jahren gearbeitet habe."
+      "description": "Webservice zur Adressvalidierung mit OpenStreetMap umgesetzt als REST-API."
+    }
   },
   "resume": {
     "DIGITALL": {
@@ -50,20 +50,20 @@
     "presentLabel": "Gegenwärtig"
   },
   "skillset": {
+    "header": "Kenntnisse und Erfahrungen",
+    "mainText": "In den letzten Jahren konnte ich mein Wissen in verschiedenen Bereichen vertiefen und erfolgreich anwenden. Zu den relevantesten gehören Fullstack-Webentwicklung, Softwarearchitektur sowie Datenintegration",
     "card1": {
-      "description": "Während meiner Zeit bei OneCalendar konnte ich mein Wissen als Softwareentwickler festigen. Dieses kontinuierliche Engagement ermöglichte es mir, mein Fachwissen mit Node.js, Typescript, React und vielen anderen Frameworks, Sprachen und Tools zu vertiefen.",
+      "description": "Während meiner Zeit bei OneCalendar konnte ich mich als Softwareentwickler stark weiterentwickeln. Hier habe ich zahlreiche Services im Frontend und Backend mit  Node.js, Typescript, React und einigen anderen Frameworks und Sprachen entwickelt.",
       "name": "Software-Entwicklung"
     },
     "card2": {
-      "description": "Während der arbeit in verschiedenen Projekten habe ich meine Bemühungen dem Aufbau von Fachwissen in der Softwarearchitektur gewidmet. So konnte ich ein tiefes Verständnis für Architekturprinzipien und Best Practices im Softwaredesign entwickeln.",
+      "description": "Während der Arbeit in verschiedenen Projekten habe ich meine Bemühungen dem Aufbau von Fachwissen in der Softwarearchitektur gewidmet. So konnte ich ein tiefes Verständnis für Architekturprinzipien und Best Practices im Softwaredesign entwickeln.",
       "name": "Softwarearchitektur"
     },
     "card3": {
       "description": "Durch meine Zeit bei DIGITALL konnte ich Erfahrungen im Bereich Integrations- und Migrationsprojekte sammeln. Ich konnte mit einer Vielzahl von Tools und Technologien arbeiten, wie zum Beispiel MuleSoft, Talend, Salesforce und vielen mehr.",
       "name": "Integration & Migration"
-    },
-    "header": "Fähigkeiten",
-    "mainText": "In den letzten Jahren konnte ich mein Wissen in verschiedenen Bereichen vertiefen und erfolgreich anwenden. Zu den relevantesten gehören Fullstack-Webentwicklung, Softwarearchitektur sowie Datenintegration"
+    }
   },
   "techStack": {
     "header": "Programmiersprachen, Technologien und Tools mit denen ich arbeite"

@@ -17,7 +17,7 @@ import { useTranslation } from '../i18n'
 
 const socials = [
   {
-    link: 'https://www.instagram.com/vanderbrandung/',
+    link: 'https://www.instagram.com/luis._schmitt/',
     ariaLabel: 'Follow on Instagram',
     icon: InstagramIcon,
   },

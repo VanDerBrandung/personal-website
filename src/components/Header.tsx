@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.jpeg'
+import avatarImage from '@/images/avatar.jpg'
 import { MobileNavigation } from './navigation/MobileNavigation'
 import { DesktopNavigation } from './navigation/DesktopNavigation'
 

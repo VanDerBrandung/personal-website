@@ -36,4 +36,4 @@ jobs:
         run: docker-compose -f docker-compose.yml pull personal-website
 
       - name: Deploy with Docker Compose
-        run: docker-compose -f docker-compose.yml up --force-recreate personal-website -d
+        run: docker-compose -f docker-compose.yml up --force-recreate -d personal-website

@@ -4,31 +4,39 @@ on:
   push:
     branches:
       - development
+      - feature-test-pipeline
 
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
+  # build-and-push:
+  #   runs-on: ubuntu-latest
 
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v2
+
+  #     - name: Login to DockerHub
+  #       uses: docker/login-action@v1
+  #       with:
+  #         username: ${{ secrets.DOCKERHUB_USERNAME }}
+  #         password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+  #     - name: Build Docker Image
+  #       run: docker-compose -f docker-compose.yml build personal-website
+
+  #     - name: Push Docker Image
+  #       run: docker-compose -f docker-compose.yml push personal-website
+  print-user:
+    runs-on: self-hosted # or any other appropriate runner
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build Docker Image
-        run: docker-compose -f docker-compose.yml build personal-website
-
-      - name: Push Docker Image
-        run: docker-compose -f docker-compose.yml push personal-website
+      - name: Print current user
+        run: whoami
+      - name: Print contexts
+        run: docker context ls
   deploy:
-    needs: build-and-push
+    # needs: build-and-push
     runs-on: self-hosted # Indicates that this job runs on a self-hosted runner
     steps:
       - name: Deploy to server
-        run: |
-          docker-compose --context dev-server -f docker-compose.yml pull personal-website  
+        run:
+          docker-compose --context dev-server -f docker-compose.yml pull personal-website
           docker-compose --context dev-server -f docker-compose.yml up --force-recreate personal-website

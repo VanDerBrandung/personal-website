@@ -14,6 +14,7 @@ import Skillset from '@/components/Skillset'
 import TechStack from '@/components/TechStack'
 import AnimatedText from '@/components/AnimatedText'
 import { useTranslation } from '../i18n'
+import { motion } from 'framer-motion'
 
 const socials = [
   {

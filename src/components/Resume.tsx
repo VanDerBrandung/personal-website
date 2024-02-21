@@ -37,9 +37,11 @@ function Role({ role }: { role: Role }) {
         <dd className='text-xs text-zinc-500 dark:text-zinc-400'>
           {role.title}
         </dd>
+      </dl>
+      <dl className='flex'>
         <dt className='sr-only'>Date</dt>
         <dd
-          className='ml-auto text-xs text-zinc-400 dark:text-zinc-500'
+          className='ml-auto flex space-x-1 text-xs text-zinc-400 dark:text-zinc-500 sm:flex-row'
           aria-label={`${startLabel} until ${endLabel}`}
         >
           <time dateTime={startDate}>{startLabel}</time>{' '}
@@ -95,7 +97,7 @@ export async function Resume({ lng }: { lng: string }) {
     <div className='rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40'>
       <h2 className='flex text-sm font-semibold text-zinc-900 dark:text-zinc-100'>
         <BriefcaseIcon className='h-6 w-6 flex-none' />
-        <span className='ml-3'>Work</span>
+        <span className='ml-3'>{t('resume.workLabel')}</span>
       </h2>
       <ol className='mt-6 space-y-4'>
         {resume.map((role, roleIndex) => (

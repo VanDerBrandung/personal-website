@@ -47,7 +47,8 @@
     "ec4u": {
       "title": "Dual Student"
     },
-    "downloadCVLabel": "Download CV"
+    "downloadCVLabel": "Download CV",
+    "workLabel": "Work"
   },
   "skillset": {
     "header": "Skills",

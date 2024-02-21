@@ -37,7 +37,7 @@
   },
   "resume": {
     "DIGITALL": {
-      "title1": "Berater",
+      "title1": "IT-Berater für Datenintegration und Migration",
       "title2": "Dualer Student"
     },
     "downloadCVLabel": "Lebenslauf herunterladen",
@@ -45,23 +45,24 @@
       "title": "Dualer Student"
     },
     "oneCalendarJob": {
-      "title": "Leitender Entwickler"
+      "title": "Co-founder | Full Stack Entwickler | DevOps Ingenieur"
     },
-    "presentLabel": "Gegenwärtig"
+    "presentLabel": "Heute",
+    "workLabel": "Berufserfahrung"
   },
   "skillset": {
     "header": "Kenntnisse und Erfahrungen",
-    "mainText": "In den letzten Jahren konnte ich mein Wissen in verschiedenen Bereichen vertiefen und erfolgreich anwenden. Zu den relevantesten gehören Fullstack-Webentwicklung, Softwarearchitektur sowie Datenintegration",
+    "mainText": "In den vergangenen Jahren habe ich meine Expertise in verschiedenen Bereichen kontinuierlich erweitert und erfolgreich in Projekten angewendet. Zu meinen herausragendsten Kompetenzen zählen die Fullstack-Webentwicklung, die Softwarearchitektur sowie die Datenintegration.",
     "card1": {
-      "description": "Während meiner Zeit bei OneCalendar konnte ich mich als Softwareentwickler stark weiterentwickeln. Hier habe ich zahlreiche Services im Frontend und Backend mit  Node.js, Typescript, React und einigen anderen Frameworks und Sprachen entwickelt.",
+      "description": "Während meiner Tätigkeit bei OneCalendar habe ich meine Fähigkeiten als Softwareentwickler kontinuierlich ausgebaut. Dort habe ich eine Vielzahl von Services sowohl im Frontend als auch im Backend mithilfe von Node.js, Typescript, React und anderen Frameworks und Programmiersprachen entwickelt.",
       "name": "Software-Entwicklung"
     },
     "card2": {
-      "description": "Während der Arbeit in verschiedenen Projekten habe ich meine Bemühungen dem Aufbau von Fachwissen in der Softwarearchitektur gewidmet. So konnte ich ein tiefes Verständnis für Architekturprinzipien und Best Practices im Softwaredesign entwickeln.",
+      "description": "Während meiner Arbeit an verschiedenen Projekten habe ich mich intensiv darauf konzentriert, mein Fachwissen im Bereich der Softwarearchitektur auszubauen. Dadurch habe ich ein fundiertes Verständnis für Architekturprinzipien und bewährte Methoden im Softwaredesign entwickelt.",
       "name": "Softwarearchitektur"
     },
     "card3": {
-      "description": "Durch meine Zeit bei DIGITALL konnte ich Erfahrungen im Bereich Integrations- und Migrationsprojekte sammeln. Ich konnte mit einer Vielzahl von Tools und Technologien arbeiten, wie zum Beispiel MuleSoft, Talend, Salesforce und vielen mehr.",
+      "description": "Durch meine Tätigkeit bei DIGITALL konnte ich umfangreiche Erfahrungen im Bereich Integrations- und Migrationsprojekte sammeln. Dabei habe ich mit einer Vielzahl von Tools und Technologien gearbeitet, darunter MuleSoft, Talend, Salesforce und viele weitere.",
       "name": "Integration & Migration"
     }
   },

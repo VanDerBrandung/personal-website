@@ -2,13 +2,12 @@ version: '3.8'
 services:
   personal-website:
     restart: unless-stopped
-    ## environment:
-    ##  - Test
     build:
       context: ./
       dockerfile: ./Dockerfile
       target: production
     image: vanderbrandung/personal-website:latest
+    container_name: personal-website-luis-schmitt
     ports:
       - '7000:3000'
     networks:

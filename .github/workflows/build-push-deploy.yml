@@ -39,13 +39,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: print docker compose version
-        run: docker-compose --version
-
-      - name: Test Docker context
-        run: docker --context dev-server ps
-
       - name: Deploy to server
-        run:
-          docker-compose --context dev-server -f docker-compose.yml pull personal-website
-          docker-compose --context dev-server -f docker-compose.yml up --force-recreate personal-website
+        run: |
+          docker-compose -f docker-compose.yml pull personal-website
+          docker-compose -f docker-compose.yml up --force-recreate personal-website

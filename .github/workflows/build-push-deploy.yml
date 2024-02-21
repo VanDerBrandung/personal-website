@@ -36,6 +36,12 @@ jobs:
     # needs: build-and-push
     runs-on: self-hosted # Indicates that this job runs on a self-hosted runner
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: print docker compose version
+        run: docker-compose --version
+
       - name: Deploy to server
         run:
           docker-compose --context dev-server -f docker-compose.yml pull personal-website

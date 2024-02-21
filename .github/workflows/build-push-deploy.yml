@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - development
-      - feature-test-pipeline
 
 jobs:
   build-and-push:
@@ -27,6 +26,7 @@ jobs:
         run: docker-compose -f docker-compose.yml push personal-website
   deploy:
     runs-on: self-hosted
+    needs: build-and-push
     steps:
       - uses: actions/checkout@v3
         with:

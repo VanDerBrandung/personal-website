@@ -24,3 +24,11 @@ jobs:
 
       - name: Push Docker Image
         run: docker-compose -f docker-compose.yml push personal-website
+  deploy:
+    needs: build-and-push
+    runs-on: self-hosted # Indicates that this job runs on a self-hosted runner
+    steps:
+      - name: Deploy to server
+        run: |
+          docker-compose --context dev-server -f docker-compose.yml pull personal-website  
+          docker-compose --context dev-server -f docker-compose.yml up --force-recreate personal-website

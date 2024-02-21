@@ -12,7 +12,7 @@ jobs:
 
   #   steps:
   #     - name: Checkout Repository
-  #       uses: actions/checkout@v2
+  #       uses: actions/checkout@v3
 
   #     - name: Login to DockerHub
   #       uses: docker/login-action@v1
@@ -25,21 +25,15 @@ jobs:
 
   #     - name: Push Docker Image
   #       run: docker-compose -f docker-compose.yml push personal-website
-  print-user:
-    runs-on: self-hosted # or any other appropriate runner
-    steps:
-      - name: Print current user
-        run: whoami
-      - name: Print contexts
-        run: docker context ls
   deploy:
-    # needs: build-and-push
-    runs-on: self-hosted # Indicates that this job runs on a self-hosted runner
+    runs-on: self-hosted # Assuming you're using a self-hosted runner
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Optional, based on your needs
 
-      - name: Deploy to server
-        run: |
-          docker-compose -f docker-compose.yml pull personal-website
-          docker-compose -f docker-compose.yml up --force-recreate personal-website
+      - name: Pull Docker images
+        run: docker-compose -f docker-compose.yml pull personal-website
+
+      - name: Deploy with Docker Compose
+        run: docker-compose -f docker-compose.yml up --force-recreate personal-website

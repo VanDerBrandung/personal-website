@@ -1,13 +1,15 @@
 import { ProjectDetailsLayout } from '@/components/ProjectDetailsLayout'
 import landingImage from './one-calendar-landing.png'
-import fullSize from './one-calendar-fullsize.png'
+import onecalendar from '@/images/logos/onecalendar.png'
+import { TechTags } from '@/components/TechTags'
 
 export const project = {
   author: 'Luis Schmitt',
   date: '2024-02-22',
   title: 'OneCalendar Landing Page',
   description:
-    'Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.',
+    'Landing Page für die OneCalendar SaaS-Plattform zur digitalisierung der Termin- und Ressourcenverwaltung von kleinen und mittelständischen Unternehmen.',
+  logo: onecalendar,
 }
 
 export const metadata = {
@@ -17,10 +19,9 @@ export const metadata = {
 
 export default (props) => <ProjectDetailsLayout project={project} {...props} />
 
-Technologies: HTML, CSS, JavaScript, React, Next.js, Figma
+<TechTags techList={['Typescript', 'React', 'Tailwind CSS']} />
 
 OneCalendar ist eine innovative SaaS-Plattform, die kleine und mittelständische Unternehmen bei der Organisation und Verwaltung von Terminen und Ressourcen unterstützt. Die Plattform bietet eine Vielzahl von Funktionen, die es Unternehmen ermöglichen, ihre Arbeitsabläufe zu optimieren und ihre Produktivität zu steigern.
+Schau gerne auf der [OneCalendar Landing Page](https://onecalendar.luis-schmitt.com) vorbei und erfahre mehr über die Plattform.
 
 <Image src={landingImage} alt='OneCalendar Landing Image' />
-
-<Image src={fullSize} alt='OneCalendar Landing Image' />

@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Software Entwickler und Tech Enthusiast",
-    "text": "Hey, ich bin Luis, ein technikbegeisterter IT-Berater und Softwareentwickler aus Karlsruhe. Eines meiner Herzensprojekte ist OneCalendar, wo ich als einer der führenden Entwicklicker tätig bin. Dort schaffen wir Tools für die Digitalisierung von mittelständischen Unternehmen."
+    "text": "Hey, ich bin Luis, ein technikbegeisterter IT-Berater und Softwareentwickler aus Karlsruhe. Ich arbeite leidenschaftlich daran, innovative Lösungen zu entwickeln und Unternehmen dabei zu unterstützen, ihre digitalen Prozesse zu optimieren."
   },
   "NavItems": {
     "aboutLabel": "Über mich",
@@ -15,10 +15,10 @@
   },
   "about": {
     "header": "Hey Ich bin Luis, IT-Berater und Softwareentwickler aus Karlsruhe.",
-    "text1": "Freut mich, dass du hier bist. Da du es bis hierhin geschafft hast, möchte ich dir ein wenig mehr über mich erzählen, also auf gehts!",
-    "text2": "Neben meiner Affinität für die verschiedensten Programmiersprachen und Tools im IT-Segment haben es mir ein paar Sportarten besonders angetan. Ich halte mich mehrmals die Woche fit mit Powerlifting und wenn ich Zeit finde verschlägt es mich auch mal auf dem Mountainbike in den Wald. Außerdem schätze ich die Zeit mit meinen Freunden und meiner Familie sehr.",
-    "text3": "Mit 17 Jahren habe ich einen Teil der Zeit die ich mit Computerspielen verbracht habe gegen das Programmieren getauscht. Zu Beginn habe ich an ein paar kleinere Projekten mit Java und C gearbeitet. Richtig los ging es allerings erst während meinem Wirtschaftsinformatik-Studium. Hier konnte ich viel über verschiedene Bereiche der Informatik lernen. Ungefähr zu dieser Zeit hat es mir die Webentwicklung besonders angetan und ich verbrachte einen großen Teil meiner Freizeit damit, etwas über Typescript, Node.js und React zu lernen. Darüber hinaus konnte ich während meiner Praxissemester bei DIGITALL Kenntnisse im Bereich Requirements Engineering, Datenmigrationen und Integrationen sammeln. Während ich noch an einigen mittelgroßen Projekten mit Java arbeitete, hat mir allerdings besonders die Arbeit mit Typescript und Node.js gefallen, weil es für mich frischen Wind in die Sache gebracht hat.",
-    "text4": "Heute arbeite ich primär als Berater für Datenintegration und Migration bei DIGITALL wo ich zahlreiche Projekte erfolgreich abgeschlossen habe. In meiner restlichen Zeit treibe ich zusammen mit dem Team die Entwicklung von OneCalendar voran. Ich arbeite sehr gerne in den beiden verschiedenen Bereichen, da ich stark von der Cross-Funktionalität profitiere."
+    "text1": "Hey, freut mich, dass du da bist! Lass mich dir hier gerne einen kleinen Einblick in mein Leben und meine Arbeit geben.",
+    "text2": "Ich bin als technischer Berater für Datenintegration und Migration bei DIGITALL tätig, wo ich bereits zahlreiche Projekte erfolgreich abgeschlossen habe. Daneben investiere ich viel Zeit in weitere Softwareprojekte. Aktuell liegt mein Fokus vor allem auf OneCalendar. Die Arbeit in beiden Bereichen bereitet mir große Freude, da ich von der Cross-Funktionalität profitiere.",
+    "text3": "Bei DIGITALL arbeite ich hauptsächlich mit Tools wie Talend, MuleSoft, Salesforce und Java. Für meine anderen Softwareprojekte verwende ich gerne Typescript, React, Next.js und Node.js. Bei der Frontendentwicklung setze ich am liebsten auf Tailwind CSS um möglichst Effizient ansprechende Designs zu erstellen. Ich bin immer auf der Suche nach neuen Herausforderungen und freue mich, wenn ich mein Wissen und meine Erfahrungen in neuen Projekten einbringen kann. Wenn du mehr über meine bisheringen Projekte erfahren möchtest, schau doch gerne in der Projektübersicht vorbei.",
+    "text4": "Neben der Zeit am Schreibtisch finde ich einen Ausgleich im Kraftsport und in der Natur. Ich gehe sehr gerne ins Fitnesstudio und mache gerne lange Touren durch den Wald. Auf dem Mountainbike oder auch zu Fuß. Bereits während dem Ende meiner Schulzeit habe ich mit einigen Klassenkameraden eine Alpenüberquerung mit dem Rad von Oberstdorf bis zum Comer See gemacht."
   },
   "notFound": {
     "goBackText": "Zurück zur Hauptseite",

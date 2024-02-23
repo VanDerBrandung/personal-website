@@ -1,0 +1,106 @@
+import { ProjectDetailsLayout } from '@/components/ProjectDetailsLayout'
+import validationSchema from './osm-validation-schema.png'
+import osmvalidation from '@/images/logos/osmvalidation.png'
+import { TechTags } from '@/components/TechTags'
+
+export const project = {
+  author: 'Luis Schmitt',
+  date: '2023-08-20',
+  title: 'Adressvalidierungsservice',
+  description:
+    'Adressvalidierungsservice zur Validierung von Kundenadressen auf Basis von OpenStreetMap',
+  logo: osmvalidation,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectDetailsLayout project={project} {...props} />
+
+<TechTags
+  techList={[
+    'Typescript',
+    'Node.js',
+    'Java',
+    'SpringBoot',
+    'MySQL',
+    'PostgreSQL',
+  ]}
+/>
+
+Das Projekt des Adressvalidierungsservice habe ich noch zu meiner Studienzeit an der DHBW Karlsruhe bei DIGITALL entwickelt. Er wird intern zur Validierung von Kundenadressen eingesetzt und nutzt die OpenStreetMaps Daten als Referenzdatensatz.
+
+Die grundlegende Funktionsweise des Service ist dabei recht simpel. Der Service nimmt über einen Endpunkt der zur Verfügung gestellten REST-API eine Adresse im JSON-Format entegegen und gibt sie in einem validierten Format mit einem Ähnlichkeitswert zurück. Sollte es keine exakte Übereinstimmung geben, werden die ähnlichsten Adressen zurück gegeben, die über einem zuvor bestimmten Schwellenwert liegen.
+
+<Image src={validationSchema} alt='OneCalendar Landing Image' />
+
+Um Adressen trotz möglicher Eingabefehler zuordnen zu können, werden verschiedene String Matching Algorithmen verwendet. In einer Evaluierungsphase wurden verschiedene Algorithmen getestet und die besten für den Service ausgewählt:
+
+- Levensthein
+- Damareu-Levensthein
+- Jaro
+- Jaro-Winkler
+- Soundex
+- Metaphone
+- Double Metaphone
+
+Final eingesetzt wurden nach einem Benchmarking letztlich der Damarau-Levensthein und der Jaro-Winkler Algorithmus.
+
+Vom Service wurden zwei Versionen entwickelt. Die erste wurde mit Java, SpringBoot und MySQL entwickelt, während die zweite Version mit Typescript, Node.js und PostgreSQL entwickelt wurde. Beide Versionen sind nach dem gleichen Schema aufgebaut und bieten die gleichen Funktionen. Die zweite Version wurde entwickelt, um die Performance des Services zu verbessern und die Kosten zu senken.
+
+Der Service stellt zwei Endpunkte zur Verfügung. Einen zum Validieren von einzelnen Adressen und einen zum Validieren von Adressen in einem Batch. Die Batch-Validierung ist dabei für die Validierung von großen Datenmengen gedacht und kann bis zu 5000 Adressen auf einmal validieren.
+Der Payload zur Validierung einer einfachen Adresse sieht dabei wie folgt aus:
+
+```json
+{
+  "id": "1",
+  "country": "DE",
+  "postcode": "76476",
+  "city": "Bischweier",
+  "street": "Friedrichstraße",
+  "housenumber": "11"
+}
+```
+
+Hier noch die Antwort des Services nach der Validierung:
+
+```json
+[
+  {
+    "id": "1",
+    "overallmatchScore": 0.96,
+    "country": {
+      "elementRequest": "DE",
+      "elementOSM": "DE",
+      "elementScore": 1.0,
+      "elementMessage": "country found"
+    },
+    "postcode": {
+      "elementRequest": "76476",
+      "elementOSM": "76476",
+      "elementScore": 1.0,
+      "elementMessage": "postcode found"
+    },
+    "city": {
+      "elementRequest": "Bischweier",
+      "elementOSM": "Bischweier",
+      "elementScore": 1.0,
+      "elementMessage": "city found"
+    },
+    "street": {
+      "elementRequest": "Friedrichstraße",
+      "elementOSM": "Friedrichstraße",
+      "elementScore": 1.0,
+      "elementMessage": "street found"
+    },
+    "housenumber": {
+      "elementRequest": "11",
+      "elementOSM": "1 - 14",
+      "elementScore": 0.8,
+      "elementMessage": "housenumber in range"
+    }
+  }
+]
+```

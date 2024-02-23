@@ -1,0 +1,63 @@
+import { ProjectDetailsLayout } from '@/components/ProjectDetailsLayout'
+import dashboardImage from './one-calendar-dashboard.png'
+import calendarView from './one-calendar-calendar-view.png'
+import calendarOBM from './one-calendar-obm.png'
+import onecalendar from '@/images/logos/onecalendar.png'
+import { TechTags } from '@/components/TechTags'
+
+export const project = {
+  author: 'Luis Schmitt',
+  date: '2024-02-22',
+  title: 'OneCalendar Landing Plattform',
+  description:
+    'SaaS-Plattform zur digitalisierung der Termin- und Ressourcenverwaltung von kleinen und mittelständischen Unternehmen.',
+  logo: onecalendar,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectDetailsLayout project={project} {...props} />
+
+<TechTags
+  techList={[
+    'Typescript',
+    'React',
+    'Node.js',
+    'Graphql',
+    'Tailwind CSS',
+    'MongoDB',
+    'Redis',
+    'Docker',
+    'Nginx',
+  ]}
+/>
+
+OneCalendar ist eine innovative SaaS-Plattform, die kleine und mittelständische Unternehmen bei der Organisation und Verwaltung von Terminen und Ressourcen unterstützt. Die Plattform bietet eine Vielzahl von Funktionen, die es Unternehmen ermöglichen, ihre Arbeitsabläufe zu optimieren und ihre Produktivität zu steigern.
+Schau gerne auf der [OneCalendar Landing Page](https://onecalendar.luis-schmitt.com) vorbei und erfahre mehr über die Plattform.
+
+Es handelt sich um ein Projekt, an dem Lukas, Viet und ich schon seit einiger Zeit arbeiten. Unser Ziel ist es, eine Plattform zu entwickeln, die es kleinen Unternehmen ermöglicht, ihre Arbeitsabläufe zu optimieren und ihre Produktivität mit minimalem Konfigurationsaufwand zu steigern.
+
+Wir haben viel Zeit und Mühe investiert und dabei Folgendes erreicht:
+
+- Aufsetzen von GitLab CI-Pipelines für automatische Tests und Deployments.
+- Bereitstellung mehrerer Server und Datenbanken für verschiedene Umgebungen.
+- Entwicklung eines umfassenden Backends mit einer GraphQL- und einer REST-API.
+- Entwicklung und Implementierung der Hauptanwendung in React.
+- Umsetzung des Buchungsmoduls.
+- Erstellung eines Wikis und einer Landingpage.
+
+Wir haben eine Vielzahl von Funktionen entwickelt und implementiert, darunter verschiedene Kalenderansichten zur Verwaltung von Terminen und Ressourcen.
+
+<Image src={calendarView} alt='OneCalendar Landing Image' />
+
+Neben vielen weiteren tabellarischen Ansichten zum Erstellen und Verwalten von Eventtypen, Kategorien, Mitarbeitern und Öffnungszeiten bietet die Plattform auch übersichtliche Dashboards um die wichtigsten Kennzahlen im Blick zu behalten.
+
+<Image src={dashboardImage} alt='OneCalendar Landing Image' />
+
+Um unsere Kunden in möglichst vielen Bereichen zu Unterstützen haben wir auch direkt ein Buchungssystem integriert, welches es den Endkunden ermöglicht Termine direkt zu buchen. Dabei haben wir darauf geachtet, dass die Plattform möglichst einfach zu bedienen ist und sich in die bestehenden Arbeitsabläufe integrieren lässt.
+Das Buchungsmodul lässt sich unter anderem in die eigene Website integrieren.
+
+<Image src={calendarOBM} alt='OneCalendar Landing OBM' />

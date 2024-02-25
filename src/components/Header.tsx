@@ -11,6 +11,7 @@ import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 import { MobileNavigation } from './navigation/MobileNavigation'
 import { DesktopNavigation } from './navigation/DesktopNavigation'
+import { TFunction } from 'i18next'
 
 function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -115,7 +116,14 @@ function Avatar({
   )
 }
 
-export function Header({ lng }: { lng: string }) {
+export function Header({
+  navitems,
+  translations,
+}: {
+  lng: string
+  navitems: { href: string; text: string }[]
+  translations: { menuLabel: string }
+}) {
   let isHomePage = usePathname() === '/'
 
   let headerRef = useRef<React.ElementRef<'div'>>(null)
@@ -294,11 +302,12 @@ export function Header({ lng }: { lng: string }) {
               </div>
               <div className='flex flex-1 justify-end md:justify-center'>
                 <MobileNavigation
-                  lng={lng}
+                  navitems={navitems}
+                  translations={translations}
                   className='pointer-events-auto md:hidden'
                 />
                 <DesktopNavigation
-                  lng={lng}
+                  navitems={navitems}
                   className='pointer-events-auto hidden md:block'
                 />
               </div>

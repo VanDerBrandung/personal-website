@@ -1,6 +1,6 @@
 export function TechTags({ techList }: { techList: string[] }) {
   return (
-    <div className='-m-1 flex flex-wrap space-x-1'>
+    <div className='-m-1 flex flex-wrap gap-1'>
       {techList.map((tech) => (
         <span
           key={tech}

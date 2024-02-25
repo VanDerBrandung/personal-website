@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ContainerInner, ContainerOuter } from '@/components/Container'
-import { NavItems } from './NavItems'
 import { useTranslation } from '../app/i18n'
 import { Trans } from 'react-i18next/TransWithoutContext'
 import clsx from 'clsx'
@@ -22,9 +21,14 @@ function NavLink({
   )
 }
 
-export async function Footer({ lng }: { lng: string }) {
+export async function Footer({
+  lng,
+  navitems,
+}: {
+  lng: string
+  navitems: { href: string; text: string }[]
+}) {
   const { t } = await useTranslation(lng)
-  const navItems = await NavItems({ lng: lng })
 
   return (
     <footer className='mt-32 flex-none'>
@@ -33,7 +37,7 @@ export async function Footer({ lng }: { lng: string }) {
           <ContainerInner>
             <div className='flex flex-col items-center justify-between gap-6 sm:flex-row'>
               <div className='flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200'>
-                {navItems.map(({ href, text }) => (
+                {navitems.map(({ href, text }) => (
                   <NavLink key={href} href={href}>
                     {text}
                   </NavLink>

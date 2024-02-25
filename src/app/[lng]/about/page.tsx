@@ -11,8 +11,8 @@ import {
 import portraitImage from '@/images/photos/portrait.jpg'
 import { MailIcon } from '@/components/Icons'
 import { SocialLinkExtended } from '@/components/SocialLinks'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import AnimatedText from '@/components/AnimatedText'
+import { FadeIn, FadeInStagger } from '@/components/animations/FadeIn'
+import AnimatedText from '@/components/animations/AnimatedText'
 import { useTranslation } from '@/app/i18n'
 
 export const metadata: Metadata = {

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { useTranslation } from '@/app/i18n'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/animations/FadeIn'
 import { ProjectWithSlug, getAllProjects } from '@/lib/projects'
 
 function Project({ project, lng }: { project: ProjectWithSlug; lng: string }) {

@@ -1,0 +1,32 @@
+import { ProjectDetailsLayout } from '@/components/ProjectDetailsLayout'
+import iotdashboard from './iot-dashboard.png'
+import iotboxlogo from '@/images/logos/iot-logo.png'
+import { TechTags } from '@/components/TechTags'
+
+export const project = {
+  author: 'Luis Schmitt',
+  date: '2022-07-04',
+  title: 'Smarte Transportbox',
+  description:
+    'Projekt zur Untersuchung des Einsatz des IoT in der Logistikbranche - Entwicklung eines Prototypen einer Transportbox mit Sensoren und Web-Anwendung zur Überwachung der Sendungen.',
+  logo: iotboxlogo,
+}
+
+export const metadata = {
+  title: project.title,
+  description: project.description,
+}
+
+export default (props) => <ProjectDetailsLayout project={project} {...props} />
+
+<TechTags techList={['Typescript', 'Python', 'Node.js', 'React', 'MongoDB']} />
+
+Das Projekt zum Einsatz des IoT in der Logistikbranche habe ich noch zu meiner Studienzeit an der DHBW Karlsruhe mit einigen Komilitonen umgesetzt.
+Die Zielsetzung des Projekts war es einen Prototypen zu entwickeln der eine Transportbox mit Sensoren austattet, um Daten während des Sendungsverlaufs zu überwachen.
+
+Für das Projekt haben wir einen Raspberry Pi verwendet, der mit verschiedenen Sensoren ausgestattet wurde. Die Sensoren haben Daten wie Temperatur, Luftfeuchtigkeit und Erschütterungen aufgezeichnet.
+Die Daten wurden dann über eine REST API an einen Server gesendet und dort in einer MongoDB Datenbank gespeichert. In einer mit React erstellten Web-Anwendungen konnten die Daten dann eingesehen werden.
+
+Eines der Kernfeatures stellt dabei das Incident Reporting dar. Beim anlegen von Versandantragen über die API können Schwellenwerte definiert werden. Wird ein Schwellenwert überschritten, wird ein Incident Report generiert und an den Versender gesendet. Dieser kann dann entsprechend reagieren und die Sendung überprüfen, was die Qualität und Sicherheit der Sendungen erhöht.
+
+<Image src={iotdashboard} alt='OneCalendar Landing Image' />

@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
-import AnimatedText from './AnimatedText'
-import { FadeIn } from './FadeIn'
+import AnimatedText from './animations/AnimatedText'
+import { FadeIn } from './animations/FadeIn'
 
 export function SimpleLayout({
   title,

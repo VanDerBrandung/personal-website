@@ -11,7 +11,7 @@ import redis from '@/images/logos/redis.svg'
 import talend from '@/images/logos/talend.svg'
 import mulesoft from '@/images/logos/mulesoft.svg'
 import Image from 'next/image'
-import { FadeIn, FadeInStagger } from './FadeIn'
+import { FadeIn, FadeInStagger } from './animations/FadeIn'
 import { useTranslation } from '../app/i18n'
 
 const images = [

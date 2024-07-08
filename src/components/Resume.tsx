@@ -1,4 +1,5 @@
 import Image, { type ImageProps } from 'next/image'
+import im from '@/images/logos/im.jpeg'
 import onecalendar from '@/images/logos/onecalendar.png'
 import digitall from '@/images/logos/digitall.jpg'
 import ec4u from '@/images/logos/ec4u.jpg'
@@ -58,10 +59,20 @@ export async function Resume({ lng }: { lng: string }) {
 
   let resume: Array<Role> = [
     {
+      company: 'Integration Matters',
+      title: 'Mulesoft Consultant',
+      logo: im,
+      start: 'Jul 2024',
+      end: {
+        label: t('resume.presentLabel'),
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
       company: 'OneCalendar',
       title: t('resume.oneCalendarJob.title'),
       logo: onecalendar,
-      start: '2021',
+      start: 'Dec 2021',
       end: {
         label: t('resume.presentLabel'),
         dateTime: new Date().getFullYear().toString(),
@@ -71,25 +82,22 @@ export async function Resume({ lng }: { lng: string }) {
       company: 'DIGITALL',
       title: t('resume.DIGITALL.title1'),
       logo: digitall,
-      start: '2022',
-      end: {
-        label: t('resume.presentLabel'),
-        dateTime: new Date().getFullYear().toString(),
-      },
+      start: 'Oct 2022',
+      end: 'Dec 2024',
     },
     {
       company: 'DIGITALL',
       title: t('resume.DIGITALL.title2'),
       logo: digitall,
-      start: '2021',
-      end: '2022',
+      start: 'Aug 2021',
+      end: 'Sep 2022',
     },
     {
       company: 'ec4u',
       title: t('resume.ec4u.title'),
       logo: ec4u,
-      start: '2019',
-      end: '2021',
+      start: 'Sep 2019',
+      end: 'Aug 2021',
     },
   ]
 

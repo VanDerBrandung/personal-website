@@ -16,8 +16,8 @@
   "about": {
     "header": "Hey Ich bin Luis, IT-Berater und Softwareentwickler aus Karlsruhe.",
     "text1": "Hey, freut mich, dass du da bist! Lass mich dir hier gerne einen kleinen Einblick in mein Leben und meine Arbeit geben.",
-    "text2": "Ich bin als technischer Berater für Datenintegration und Migration bei DIGITALL tätig, wo ich bereits zahlreiche Projekte erfolgreich abgeschlossen habe. Daneben investiere ich viel Zeit in weitere Softwareprojekte. Aktuell liegt mein Fokus vor allem auf OneCalendar. Die Arbeit in beiden Bereichen bereitet mir große Freude, da ich von der Cross-Funktionalität profitiere.",
-    "text3": "Bei DIGITALL arbeite ich hauptsächlich mit Tools wie Talend, MuleSoft, Salesforce und Java. Für meine anderen Softwareprojekte verwende ich gerne Typescript, React, Next.js und Node.js. Bei der Frontendentwicklung setze ich am liebsten auf Tailwind CSS um möglichst Effizient ansprechende Designs zu erstellen. Ich bin immer auf der Suche nach neuen Herausforderungen und freue mich, wenn ich mein Wissen und meine Erfahrungen in neuen Projekten einbringen kann. Wenn du mehr über meine bisheringen Projekte erfahren möchtest, schau doch gerne in der Projektübersicht vorbei.",
+    "text2": "Ich bin als technischer Berater für Datenintegration und Migration bei Integration Matters tätig, wo ich an einer vielzahl spannender Projekte arbeite. Daneben investiere ich viel Zeit in weitere Softwareprojekte. Aktuell liegt mein Fokus vor allem auf OneCalendar. Die Arbeit in beiden Bereichen bereitet mir große Freude, da ich von der Cross-Funktionalität profitiere.",
+    "text3": "Bei Integration Matters arbeite ich hauptsächlich mit Tools wie MuleSoft, Salesforce und Java. Für meine anderen Softwareprojekte verwende ich gerne Typescript, React, Next.js und Node.js. Bei der Frontendentwicklung setze ich am liebsten auf Tailwind CSS um möglichst Effizient ansprechende Designs zu erstellen. Ich bin immer auf der Suche nach neuen Herausforderungen und freue mich, wenn ich mein Wissen und meine Erfahrungen in neuen Projekten einbringen kann. Wenn du mehr über meine bisheringen Projekte erfahren möchtest, schau doch gerne in der Projektübersicht vorbei.",
     "text4": "Neben der Zeit am Schreibtisch finde ich einen Ausgleich im Kraftsport und in der Natur. Ich gehe sehr gerne ins Fitnesstudio und mache gerne lange Touren durch den Wald. Auf dem Mountainbike oder auch zu Fuß. Bereits während dem Ende meiner Schulzeit habe ich mit einigen Klassenkameraden eine Alpenüberquerung mit dem Rad von Oberstdorf bis zum Comer See gemacht."
   },
   "notFound": {
@@ -62,7 +62,7 @@
       "name": "Softwarearchitektur"
     },
     "card3": {
-      "description": "Durch meine Tätigkeit bei DIGITALL konnte ich umfangreiche Erfahrungen im Bereich Integrations- und Migrationsprojekte sammeln. Dabei habe ich mit einer Vielzahl von Tools und Technologien gearbeitet, darunter MuleSoft, Talend, Salesforce und viele weitere.",
+      "description": "Durch meine Tätigkeit bei DIGITALL und mittlerweile Integration Matters verfüge ich über umfangreiche Erfahrung in Datenintegrationsprojekten. Ich habe mit einer Vielzahl von Tools und Technologien gearbeitet, darunter MuleSoft, Talend, Salesforce und viele weitere.",
       "name": "Integration & Migration"
     }
   },

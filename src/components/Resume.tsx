@@ -35,7 +35,7 @@ function Role({ role }: { role: Role }) {
           {role.company}
         </dd>
         <dt className='sr-only'>Role</dt>
-        <dd className='text-xs text-zinc-500 dark:text-zinc-400'>
+        <dd className='text-xs text-zinc-500 dark:text-zinc-400 max-w-44 md:max-w-none'>
           {role.title}
         </dd>
       </dl>
@@ -45,9 +45,9 @@ function Role({ role }: { role: Role }) {
           className='ml-auto flex space-x-1 text-xs text-zinc-400 dark:text-zinc-500 sm:flex-row'
           aria-label={`${startLabel} until ${endLabel}`}
         >
-          <time dateTime={startDate}>{startLabel}</time>{' '}
+          <time className='min-w-14' dateTime={startDate}>{startLabel}</time>{' '}
           <span aria-hidden='true'>—</span>{' '}
-          <time dateTime={endDate}>{endLabel}</time>
+          <time className='text-end min-w-14' dateTime={endDate}>{endLabel}</time>
         </dd>
       </dl>
     </li>

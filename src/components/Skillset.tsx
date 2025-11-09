@@ -30,7 +30,7 @@ export default async function Skillset({ lng }: { lng: string }) {
     <div className='relative isolate py-12'>
       <div className='mx-auto max-w-7xl'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl'>
+          <h2 className='text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl'>
             {t('skillset.header')}
           </h2>
           <p className='text-md mt-6 leading-8 text-zinc-600 dark:text-zinc-400'>

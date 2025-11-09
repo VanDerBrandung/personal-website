@@ -17,11 +17,11 @@ import { useTranslation } from '../i18n'
 import { motion } from 'framer-motion'
 
 const socials = [
-  {
-    link: 'https://www.instagram.com/luis._schmitt/',
-    ariaLabel: 'Follow on Instagram',
-    icon: InstagramIcon,
-  },
+  // {
+  //   link: 'https://www.instagram.com/luis._schmitt/',
+  //   ariaLabel: 'Follow on Instagram',
+  //   icon: InstagramIcon,
+  // },
   {
     link: 'https://www.linkedin.com/in/luis-schmitt-465a7116b/',
     ariaLabel: 'Follow on LinkedIn',
@@ -81,24 +81,26 @@ export default async function Home({
         </div>
       </Container>
       <Container>
-        <TechStack lng={lng} />
         <Skillset lng={lng} />
       </Container>
-
-      <Photos />
-      <Container className='mt-24 md:mt-28'>
-        {/* <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'> */}
+      <Container>
+        <FadeIn>
+          <Resume lng={lng} />
+        </FadeIn>
+      </Container>
+      {/* <Photos /> */}
+      {/* <Container className='mt-24 md:mt-28'>
+        <div className='mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2'>
         <div className='mx-auto grid max-w-2xl grid-cols-1 gap-y-8'>
           <div className='flex flex-col gap-16'>
-            {/* {articles.map((article) => (
+            {articles.map((article) => (
               <Article key={article.slug} article={article} />
-            ))} */}
+            ))}
           </div>
-
-          <FadeIn>
-            <Resume lng={lng} />
-          </FadeIn>
         </div>
+      </Container> */}
+      <Container>
+        <TechStack lng={lng} />
       </Container>
     </>
   )

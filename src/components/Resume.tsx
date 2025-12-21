@@ -3,8 +3,7 @@ import im from '@/images/logos/im.jpeg'
 import onecalendar from '@/images/logos/onecalendar.png'
 import digitall from '@/images/logos/digitall.jpg'
 import ec4u from '@/images/logos/ec4u.jpg'
-import { ArrowDownIcon, BriefcaseIcon } from './Icons'
-import { Button } from './Button'
+import { BriefcaseIcon } from './Icons'
 import { useTranslation } from '../app/i18n'
 
 interface Role {

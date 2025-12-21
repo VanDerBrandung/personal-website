@@ -63,7 +63,7 @@ export async function Resume({ lng }: { lng: string }) {
   let resume: Array<Role> = [
     {
       company: 'Integration Matters',
-      title: 'Mulesoft Consultant',
+      title: 'Integration Consultant',
       logo: im,
       start: 'Jul 2024',
       end: {
